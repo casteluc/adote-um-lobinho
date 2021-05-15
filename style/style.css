@@ -1,0 +1,376 @@
+:root {
+   font-family: Poppins, sans-serif;
+
+   /* variables */
+   --bg-colored: #2C5680;
+   --bg-colored-darker: #193450;
+   --bg-dark: #333333;
+   --bg-light: #fafafa;
+   --text-colored: #DEB959;
+   --text-dark: #212121;
+   --text-light: #fafafa;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    height:auto !important;;
+    min-height: 80%;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.button {
+    padding: 5px 15px;
+    background-color: var(--text-colored);
+    color: var(--text-dark);
+    font-family: 'Darker Grotesque', Poppins, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--text-dark);
+    color: var(--text-colored);
+    border: 2px solid var(--text-colored);
+}
+
+#index section h2 {
+    font-size: 2rem;
+    color: var(--text-colored);
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ------------------------- HEADER ----------------------------- */
+header {
+    background-color: var(--bg-colored-darker);
+    padding: 20px 0;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    transition: padding 0.5s;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav li:not(:nth-child(2)) a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+header nav li:not(:nth-child(2)) a::after {
+    background-color: var(--text-light);
+    content: '';
+    width: 100%; height: 2px;
+    bottom: 0;
+    transition: 0.3s;
+    transform: scaleX(0);
+    display: block;
+}
+
+header nav li:nth-child(1) a::after {transform-origin: left;}
+header nav li:nth-child(3) a::after {transform-origin: right;}
+
+header nav li:not(:nth-child(2)) a:hover::after {
+    transform: scaleX(1);
+}
+
+header nav img {
+    width: 70px;
+}
+
+
+/* ------------------------- INITIAL ----------------------------- */
+#initial {
+    background-image: url("../assets/lobo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    padding: 140px 0;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+}
+
+#initial::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+} 
+
+#initial .container {
+    position: relative;
+}
+
+#initial h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+#initial h1::before {
+    content: '';
+    position: absolute;
+    top: 40%; left: 50%;
+    transform: translate(-50%);
+    width: 10rem; height: 3px;
+    background-color: var(--text-light);
+    transition: width 0.3s;
+}
+
+#initial h1:hover::before {
+    width: 15rem;
+}
+
+#initial p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ------------------------- ABOUT ----------------------------- */
+section#about {
+    background-color: var(--bg-colored);
+    text-align: center;
+    padding: 50px 0;
+}
+
+section#about p {
+    color: var(--text-light);
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+/* ------------------------- VALUES ----------------------------- */
+#values {
+    background-color: var(--bg-dark);
+    text-align: center;
+    padding: 50px 0;
+}
+
+#values .container h2 {
+    margin-bottom: 0;
+}
+
+#values .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#values .card {
+    max-width: 180px;
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light)
+}
+
+#values .card .card-img {
+    background-color: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+}
+
+#values .card h3 {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+#values .card p {
+    font-weight: 300;
+}
+
+#initial::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+} 
+
+/* ------------------------- EXAMPLES ----------------------------- */
+#examples {
+    padding: 50px 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+#examples .container h2 {
+    margin-bottom: 60px;
+}
+
+#examples .example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#examples .example h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#examples .example h3 + p {
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+#examples .example p + p {
+    line-height: 1.2rem;
+}
+
+#examples .example img {
+    max-width: 400px;
+    max-height: 240px;
+    margin-left: auto;
+    box-shadow: -20px -20px 0 var(--bg-colored),
+                -20px -20px 0 3px var(--bg-dark);
+}
+
+#examples .example:nth-child(2n + 1) {
+    text-align: right;
+}
+#examples .example:nth-child(2n + 1) img{
+    order: 3;
+    margin-left: 0;
+    margin-right: auto;
+    box-shadow: 20px -20px 0 var(--bg-colored),
+                20px -20px 0 3px var(--bg-dark);
+}
+
+/* ------------------------- FOOTER ----------------------------- */
+footer {
+    background-color: var(--bg-dark);
+
+}
+
+footer .colored-line {
+    height: 5px;
+    background: linear-gradient(to left, #2C5680, #DEB959);
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0;
+    padding-top: 10px;
+}
+
+footer .container > div {
+    margin: 0 15px;
+    max-width: 460px;
+}
+
+footer iframe {
+    width: 300px;
+    height: 200px;;
+}
+
+footer a {
+    display: flex;
+    margin-bottom: 20px;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+footer a i {
+    margin-right: 10px
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .container > div:last-of-type {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 10rem;
+    margin: auto 0;
+}
+
+footer .container > * {
+    margin-top: 30px !important;
+}
+/* ------------------------- MEDIA QUERIES ----------------------------- */
+@media only screen and (max-width: 890px) {
+    #examples .example {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+        text-align: center !important;
+    }
+
+    #examples .example img {
+        margin: 0 auto;
+    }
+
+    #examples .example > div {
+        align-self: flex-start;
+    }
+
+    #examples .example:nth-child(2n + 1) {
+        text-align: right;
+    }
+
+    #examples .example:nth-child(2n + 1) img{
+        order: 0;
+        margin: 0 auto;
+        box-shadow: 20px -20px 0 var(--bg-colored),
+                    20px -20px 0 3px var(--bg-dark);
+    }
+    
+    
+}
+@media only screen and (max-width: 600px) {
+    header {position: relative;}
+    header nav ul {flex-direction: column;}
+    header nav ul li:nth-child(2) {order: -1;}
+    header nav ul li:not(:nth-child(2)) {padding: 15px 0;}
+    header nav li:nth-child(3) a::after {right: unset; left: 0;}
+
+    #examples .example img {
+        width: 300px;
+    }
+}
