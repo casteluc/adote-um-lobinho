@@ -16,7 +16,7 @@ Mantenha o código limpo e sempre o máximo otimizado possível. Atente-se às m
 
 ## 🔗 Links importantes
 * [Layout do projeto](https://www.figma.com/file/MxXzZTYj8nrbaCOpAZiv5j/Adote-um-Lobinho-2021.2?node-id=22%3A149)
-* [Documentação da API](https://lobinhos.herokuapp.com/)
+* [Documentação da API](https://docs.google.com/document/d/17XFRxNQhWNVMizMUBNkZzqYLv2iiJ5ufuS12H8Wpu0Q/edit?usp=sharing)
 
 ### [🚨 Acesse o app em produção!](https://adote-um-lobinho.vercel.app/)
 
